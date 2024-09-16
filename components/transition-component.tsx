@@ -2,7 +2,6 @@
 
 import { fadeIn } from "@/utils/motion-transitions";
 import { motion } from "framer-motion";
-import { Children } from "react";
 
 interface MotionTransitionProps {
     children: React.ReactNode

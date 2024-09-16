@@ -1,4 +1,7 @@
 import { BookText, CodeSquare, HomeIcon, UserRound, Linkedin, Rss, Crop, Pencil, Computer, Book, Rocket, Speech, Instagram, Github } from "lucide-react";
+import { htmlIcon, cssIcon, javascriptIcon, sassIcon, npmIcon, reactIcon, viteJsIcon, tailwindIcon, bootstrapIcon, nextJsIcon, gulpIcon, typescriptIcon, wordpressIcon, gitIcon, githubIcon, vsCodeIcon, phpIcon } from './components/icons/icons-component';
+
+export type IconComponent = React.FC<React.SVGProps<SVGSVGElement>>;
 
 export const socialNetworks = [
     {
@@ -47,13 +50,7 @@ export const itemsNavbar = [
         id: 4,
         title: "Target",
         icon: <CodeSquare size={25} color="#fff" strokeWidth={1} />,
-        link: "/portfolio",
-    },
-    {
-        id: 5,
-        title: "Home",
-        icon: <Speech size={25} color="#fff" strokeWidth={1} />,
-        link: "/testimonials",
+        link: "/portafolio",
     },
 ];
 
@@ -64,6 +61,7 @@ export const dataAboutPage = [
         subtitle: "TechSolutions",
         description: "Colabora con un equipo dinámico para desarrollar interfaces de usuario atractivas y funcionales que impulsen el éxito de nuestros clientes en el mundo digital.",
         date: "Nov 2023 ",
+        icons: [] as IconComponent[], 
     },
     {
         id: 2,
@@ -147,20 +145,31 @@ export const serviceData = [
     },
 ];
 
-export const dataPortfolio = [
+export const dataPortafolio = [
     {
         id: 1,
         title: "Web Pro",
         image: "/image-1.jpg",
+        description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
         urlGithub: "#!",
         urlDemo: "#!",
+        icons: [
+            htmlIcon, cssIcon, javascriptIcon, phpIcon,
+            vsCodeIcon, gitIcon, githubIcon,
+            sassIcon, typescriptIcon,
+            npmIcon, gulpIcon, viteJsIcon,
+            wordpressIcon, reactIcon, nextJsIcon,
+            bootstrapIcon, tailwindIcon,
+        ] as IconComponent[],
     },
     {
         id: 2,
         title: "Desarrollo Web Ágil",
         image: "/image-2.jpg",
+        description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
         urlGithub: "#!",
         urlDemo: "#!",
+        icons: [htmlIcon] as IconComponent[],
     },
     {
         id: 3,
@@ -173,36 +182,46 @@ export const dataPortfolio = [
         id: 4,
         title: "Ideas Creativas",
         image: "/image-4.jpg",
+        description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
         urlGithub: "#!",
         urlDemo: "#!",
+        icons: [htmlIcon] as IconComponent[],
     },
     {
         id: 5,
         title: "Webs Impactantes",
         image: "/image-5.jpg",
+        description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
         urlGithub: "#!",
         urlDemo: "#!",
+        icons: [htmlIcon] as IconComponent[],
     },
     {
         id: 6,
         title: "Web Dinámica",
         image: "/image-6.jpg",
+        description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
         urlGithub: "#!",
         urlDemo: "#!",
+        icons: [htmlIcon] as IconComponent[],
     },
     {
         id: 7,
         title: "Dark Web ",
         image: "/image-7.jpg",
+        description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
         urlGithub: "#!",
         urlDemo: "#!",
+        icons: [htmlIcon] as IconComponent[],
     },
     {
         id: 8,
         title: "E-commerce web",
         image: "/image-8.jpg",
+        description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
         urlGithub: "#!",
         urlDemo: "#!",
+        icons: [htmlIcon] as IconComponent[],
     }
 ];
 
@@ -250,3 +269,37 @@ export const dataTestimonials = [
         imageUrl: "/profile6.png",
     },
 ];
+
+// Contenido de la biografía:
+export const biografyContent = {
+    speciality: "Web Developer especializado en Frontend.",
+    description: "Me dedico a desarrollar proyectos web en mi tiempo libre.",
+    pictureProfileUrl: "/home-4.png",
+}
+
+// Configuración de las Animaciones:
+export const animationSettings = {
+    delayTypeAnimation: 1000,
+    stringTypeAnimationPhrase: "Si puedes imaginarlo,",
+    arrayTypeAnimationPhrases: [
+        "puedes diseñarlo.",
+        "puedes programarlo.",
+        "puedes optimizarlo.",
+        "puedes implementarlo.",
+        "puedes desarrollarlo.",
+        "puedes crearlo."
+    ],
+    sequence: () => {
+        const { arrayTypeAnimationPhrases, delayTypeAnimation } = animationSettings;
+        return arrayTypeAnimationPhrases.flatMap((phrase) => [
+            phrase,
+            delayTypeAnimation // Este retraso se aplica después de cada frase
+        ]);
+    }
+};
+
+// Configuración de Botones:
+export const buttonSettings = {
+    contactButtonWhite: "Visualizar Proyectos",
+    contactButtonOrange: "Contactar Conmigo"
+};

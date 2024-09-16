@@ -72,7 +72,7 @@ const CoverParticles = () => {
                                 default: "bounce",
                             },
                             random: false,
-                            speed: 1,
+                            speed: 4,
                             straight: false,
                         },
                         number: {
