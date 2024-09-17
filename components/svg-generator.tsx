@@ -16,13 +16,13 @@ interface SvgGeneratorProps {
 }
 
 const SvgGenerator = ({ data }: SvgGeneratorProps) => {
-  const { id, icons = [] } = data; // Asignar valor por defecto a icons
+  const { icons = [] } = data; // Asignar valor por defecto a icons
 
   return (
-    <div className='grid grid-cols-5 gap-x-8 gap-y-12 items-end'>
+    <div className='grid grid-cols-5 gap-x-8 gap-y-12 items-end xl:grid-cols-6'>
       {icons.length > 0 ? (
         icons.map((IconComponent) => (
-          <IconComponent/>
+          <IconComponent className='cursor-pointer'/>
         ))) : (<p>No icons available</p>)}
     </div>
   );

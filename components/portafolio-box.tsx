@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SvgGenerator from "./svg-generator";
 import { IconComponent } from "@/data";
-import {GithubIcon, MoveRight } from "lucide-react";
+import {GithubIcon } from "lucide-react";
 import ExternalLinkOut from "./icons/external-link-icon";
 
 interface PortafolioBoxProps {
@@ -27,37 +27,42 @@ const PortafolioBox = (props: PortafolioBoxProps) => {
             <div className={`flex justify-center items-center ${isEven ? 'md:order-1' : 'md:order-0'}`}>
                 <Image 
                     src={image} 
-                    alt={`Image of ${title}`} 
-                    width={200} 
-                    height={200} 
+                    alt={`Image of ${title}`}
+                    layout="intrinsic"
+                    width={1000} 
+                    height={1000} 
                     className="block w-full rounded-2xl h-auto" 
                 />
             </div>
         
-            <div className="flex flex-col mt-5">
-                <h2 className="text-3xl font-bold uppercase md:text-5xl">
-                    {title}
-                </h2>
+            <div className="flex flex-col mt-5 md:justify-between md:mt-12 md:mb-4">
+                <div>
+                    <h2 className="text-3xl font-bold uppercase md:text-5xl">
+                        {title}
+                    </h2>
 
-                <p className="mt-12">
-                    {description}
-                </p>
+                    <p className="mt-12">
+                        {description}
+                    </p>
+                </div>
 
-                <h3 className="text-3xl mt-12 font-bold uppercase">
-                    Tecnologías y Herramientas {' '}
+                <div>
+                    <h3 className="text-3xl mt-12 font-bold uppercase">
+                        Tecnologías y Herramientas {' '}
 
-                    <span className="hidden md:inline"> 
-                        de Desarrollo {' '}
-                    </span>
+                        <span className="hidden md:inline"> 
+                            de Desarrollo {' '}
+                        </span>
 
-                    <span className="hidden 2xl:inline">
-                        Utilizadas
-                    </span>
-                    :
-                </h3>
+                        <span className="hidden 2xl:inline">
+                            Utilizadas
+                        </span>
+                        :
+                    </h3>
 
-                <div className="mt-12 mb-8 flex gap-4">
-                    <SvgGenerator data={data} />
+                    <div className="mt-12 mb-8 flex gap-4">
+                        <SvgGenerator data={data} />
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-2 justify-center gap-4 mt-10 text-center font-bold md:text-3xl">
