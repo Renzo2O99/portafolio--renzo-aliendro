@@ -26,6 +26,18 @@ main {
   height: 100dvh;
 }
 
+.portafolioPage {
+  background-image: linear-gradient(to left, #240b36, #c31432);
+}
+
+.glassmorphism {
+  background: rgba( 255, 255, 255, 0.05 );
+  backdrop-filter: blur( 2px );
+  -webkit-backdrop-filter: blur( 2px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
 @media (min-width: 992px) {
   img {
     max-width: 85%;

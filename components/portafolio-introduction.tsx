@@ -4,7 +4,7 @@ const PortafolioIntroduction = () => {
     return (
         <div className="w-full max-w-6xl px-4 mx-auto mt-40 md:pb-0 md:px-6">
             <div className="flex flex-col justify-center mb-16 md:mb-32">
-                <h1 className="font-bold text-4xl mb-12 pt-16 leading-tight text-center md:text-6xl">
+                <h1 className="font-bold text-4xl mb-12 pt-16 mt-12 leading-tight text-center md:text-6xl md:mt-8">
                     Mis Últimos 
                     {' '}
                     <span className="text-secondary font-bold">

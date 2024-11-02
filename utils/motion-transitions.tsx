@@ -5,7 +5,11 @@ export const transitionVariantsPage = {
     },
     animate: {
         x: "0%",
-        width: "0%"
+        width: "0%",
+        transition: {
+            duration: 1, // Duración de la animación
+            delay: 1.4, // Delay para que inicie después de `reverse`
+        }
     },
     exit: {
         x: ["0%", "100%"],

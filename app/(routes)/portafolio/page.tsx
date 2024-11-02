@@ -13,7 +13,7 @@ const PortafolioPage = () => {
             <PortafolioIntroduction/>
 
             {dataPortafolio.slice()                      // Crea una copia del array para no modificar el original
-                            .sort((a, b) => b.id - a.id) // Ordena en orden descendente según el id
+                            .sort((a, b) => b.position - a.position) // Ordena en orden descendente según el id
                             .map((data) => (
                 <PortafolioBox key={data.id} data={data} />
             ))}                         

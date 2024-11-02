@@ -6,7 +6,7 @@ const ContainerPortafolio = (props: ContainerProps) => {
     const { children } = props;
 
     return(
-        <div className="max-w-[90vw] pb-40 mx-auto mt-40 md:pb-0 md:px-6">
+        <div className="portafolioPage min-w-[100vw] min-h-[100vw] py-40 px-[5vw] -mt-48 mx-auto md:px-[10vh]">
             {children}
         </div>
     );

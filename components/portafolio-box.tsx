@@ -3,11 +3,11 @@ import Link from "next/link";
 import SvgGenerator from "./svg-generator";
 import { IconComponent } from "@/data";
 import {GithubIcon } from "lucide-react";
-import ExternalLinkOut from "./icons/external-link-icon";
 
 interface PortafolioBoxProps {
     data: {
         id: number;
+        position: number;
         title: string;
         image: string;
         description: string;
@@ -19,12 +19,12 @@ interface PortafolioBoxProps {
 
 const PortafolioBox = (props: PortafolioBoxProps) => {
     const {data} = props;
-    const {id, title, image, description, urlGithub, urlDemo} = data;
-    const isEven: boolean = id % 2 === 0;
+    const {id, position, title, image, description, urlGithub, urlDemo} = data;
+    const isEven: boolean = position % 2 === 0;
 
     return (
-        <div className="grid mb-24 gap-y-12 md:p-8 md:grid-cols-2 md:gap-x-12">
-            <div className={`flex justify-center items-center ${isEven ? 'md:order-1' : 'md:order-0'}`}>
+        <div className={`grid ${id === 1 ? 'mb-0' : 'mb-24'} gap-y-12 md:p-8 md:grid-cols-2 md:gap-x-12`}>
+            <div className={`flex justify-center items-center ${isEven ? 'md:order-1' : 'md:order-0'}`}>   
                 <Image 
                     src={image} 
                     alt={`Image of ${title}`}
@@ -69,8 +69,7 @@ const PortafolioBox = (props: PortafolioBoxProps) => {
                     <Link 
                         href={urlGithub} 
                         target="_blank" 
-                        className="flex items-center justify-center gap-4 transition-duration-150 p-4 rounded-2xl bg-slate-500 md:hover:bg-slate-500/80 md:gap-8"
-                    >
+                        className="flex items-center justify-center gap-4 transition-duration-150 p-4 rounded-2xl bg-slate-500 transition-all hover:scale-90 md:hover:bg-slate-500/80 md:gap-8">
                         <span className="text-center">
                             <span className="hidden md:inline">Repositorio {' '}</span>
                             GitHub
@@ -79,17 +78,28 @@ const PortafolioBox = (props: PortafolioBoxProps) => {
                         <GithubIcon width="50" height="50" />
                     </Link>
 
-                    <Link 
-                        href={urlDemo} 
-                        target="_blank" 
-                        className="flex items-center justify-end gap-4 transition-duration-150 p-4 pr-8 rounded-2xl bg-secondary md:justify-center md:hover:bg-secondary/80"
-                    >
-                        <span className="text-center md:pl-4">
-                            <span className="hidden md:inline">Visualizar{' '}</span>
-                            Preview
+                    <Link
+                    href={urlDemo} 
+                    target="_blank"
+                    className="group relative flex justify-center items-center overflow-hidden rounded bg-indigo-600 px-8 py-3 text-white transition-all hover:scale-90 hover:bg-indigo-600/80 focus:outline-none focus:ring active:bg-indigo-500">
+                        <span className="absolute -end-full transition-all group-hover:end-4">
+                            <svg
+                            className="size-10 rtl:rotate-180"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"><path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
                         </span>
 
-                        <ExternalLinkOut className="font-bold order-1 md:pl-4" width="50" height="50"/>
+                        <span className="text-3xl font-medium transition-all me-4"> 
+                            <span className="hidden md:inline">Visualizar {' '}</span>
+                            Demo
+                        </span>
                     </Link>
                 </div>
             </div>

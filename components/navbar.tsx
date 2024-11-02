@@ -16,7 +16,7 @@ const Navbar = () => {
                 {itemsNavbar.map((item) => (
                     <div key={item.id}
                     className={`
-                    px-3 py-2 transition duration-100 rounded-full cursor-pointer hover:bg-secondary 
+                    cursor-pointer px-3 py-2 transition duration-100 rounded-full cursor-pointer hover:bg-secondary 
                     ${router === item.link && 'bg-secondary'}`}>
                         <Link href={item.link}>{item.icon}</Link>
                     </div>

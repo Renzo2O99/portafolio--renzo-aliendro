@@ -1,5 +1,10 @@
 import { BookText, CodeSquare, HomeIcon, UserRound, Linkedin, Rss, Crop, Pencil, Computer, Book, Rocket, Speech, Instagram, Github } from "lucide-react";
-import { htmlIcon, cssIcon, javascriptIcon, sassIcon, npmIcon, reactIcon, viteJsIcon, tailwindIcon, bootstrapIcon, nextJsIcon, gulpIcon, typescriptIcon, wordpressIcon, gitIcon, githubIcon, vsCodeIcon, phpIcon } from './components/icons/icons-component';
+import { 
+    htmlIcon, cssIcon, javascriptIcon, typescriptIcon, phpIcon,
+    sassIcon, npmIcon, 
+    reactIcon, viteJsIcon, nextJsIcon,
+    tailwindIcon, bootstrapIcon, gulpIcon, wordpressIcon,
+    gitIcon, githubIcon, vsCodeIcon } from './components/icons/icons-component';
 
 export type IconComponent = React.FC<React.SVGProps<SVGSVGElement>>;
 
@@ -26,6 +31,12 @@ export const socialNetworks = [
     },
 ];
 
+export const technologiesIcons = [
+    sassIcon, npmIcon, 
+    reactIcon, viteJsIcon, nextJsIcon,
+    tailwindIcon, bootstrapIcon, gulpIcon, wordpressIcon,
+    gitIcon, githubIcon, vsCodeIcon
+]
 
 export const itemsNavbar = [
     {
@@ -148,6 +159,7 @@ export const serviceData = [
 export const dataPortafolio = [
     {
         id: 1,
+        position: 1,
         title: "Landing Page - Empresa de Arquitectura",
         image: "/mockup-project-1.jpg",
         description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
@@ -156,17 +168,10 @@ export const dataPortafolio = [
         icons: [
             htmlIcon, cssIcon
         ] as IconComponent[],
-        /*icons: [
-            htmlIcon, cssIcon, javascriptIcon, phpIcon,
-            vsCodeIcon, gitIcon, githubIcon,
-            sassIcon, typescriptIcon,
-            npmIcon, gulpIcon, viteJsIcon,
-            wordpressIcon, reactIcon, nextJsIcon,
-            bootstrapIcon, tailwindIcon,
-        ] as IconComponent[],*/
     },
     {
         id: 2,
+        position: 2,
         title: "Landing Page - Nust (Tarjeta de Crédito)",
         image: "/mockup-project-2.png",
         description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
@@ -176,15 +181,17 @@ export const dataPortafolio = [
     },
     {
         id: 3,
+        position: 3,
         title: "Landing Page - Meeti",
         image: "/mockup-project-3.png",
         description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
         urlGithub: "https://github.com/Renzo2O99/Proyecto--Landing-Page-Meeti",
         urlDemo: "#!",
-        icons: [htmlIcon, cssIcon, npmIcon, sassIcon, gulpIcon] as IconComponent[],
+        icons: [htmlIcon, cssIcon, npmIcon,gulpIcon, sassIcon] as IconComponent[],
     },
     {
         id: 4,
+        position: 4,
         title: "Web Site - Sitio Web Cafetería",
         image: "/mockup-project-4.png",
         description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
@@ -192,11 +199,12 @@ export const dataPortafolio = [
         urlDemo: "https://renzo2o99.github.io/Proyecto---Sitio-Web-de-una-Cafeteria/",
         icons: [
             htmlIcon, cssIcon, 
-            npmIcon, sassIcon, gulpIcon,
+            npmIcon, gulpIcon, sassIcon,
         ] as IconComponent[],
     },
     {
         id: 5,
+        position: 5,
         title: "Landing Page - Podcast FM",
         image: "/mockup-project-5.png",
         description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
@@ -209,6 +217,7 @@ export const dataPortafolio = [
     },
     {
         id: 6,
+        position: 6,
         title: "Landing Page - Festival Techno Music",
         image: "/mockup-project-6.png",
         description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
@@ -216,11 +225,12 @@ export const dataPortafolio = [
         urlDemo: "https://renzo2o99.github.io/Proyecto---Festival-de-Musica-Techno/",
         icons: [
             htmlIcon, cssIcon, javascriptIcon,
-            npmIcon, sassIcon, gulpIcon,
+            npmIcon,gulpIcon, sassIcon,
         ] as IconComponent[],
     },
     {
         id: 7,
+        position: 7,
         title: "Web Site/Blog - GymFitness",
         image: "/mockup-project-7.png",
         description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
@@ -231,15 +241,6 @@ export const dataPortafolio = [
             npmIcon, wordpressIcon
         ] as IconComponent[],
     },
-    {
-        id: 8,
-        title: "E-commerce web",
-        image: "/image-8.jpg",
-        description: "Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.",
-        urlGithub: "#!",
-        urlDemo: "#!",
-        icons: [htmlIcon] as IconComponent[],
-    }
 ];
 
 export const dataTestimonials = [

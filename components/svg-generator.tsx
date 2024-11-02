@@ -6,6 +6,7 @@ type IconComponent = React.FC<React.SVGProps<SVGSVGElement>>;
 interface SvgGeneratorProps {
   data: {
     id: number;
+    position: number;
     title: string;
     image: string;
     description: string;
@@ -17,6 +18,9 @@ interface SvgGeneratorProps {
 
 const SvgGenerator = ({ data }: SvgGeneratorProps) => {
   const { icons = [] } = data; // Asignar valor por defecto a icons
+  if (data.position % 2 === 1) {
+    data.position += 1;
+  }
 
   return (
     <div className='grid grid-cols-5 gap-x-8 gap-y-12 items-end xl:grid-cols-6'>
